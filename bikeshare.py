@@ -247,6 +247,9 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
+        # display individual trip data on user request
+        # "yes" : display 5 individual trip data
+        # "no"  : continue
         while True:
             disp_individual_data = input(
                 '\nWould you like to see individual trip data? Enter yes or no.\n')
