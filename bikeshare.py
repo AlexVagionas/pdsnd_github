@@ -217,17 +217,34 @@ def user_stats(df):
     print('-'*40)
 
 
-def individual_data(df):
-    """Displays individual data of bikeshare users."""
+def get_rand_rows(df, n):
+    """
+    Extracts n random rows from DataFrame
+
+    Args:
+        (DataFrame) df - Pandas DataFrame containing city data filtered by month and day
+        (int) n - number of rows to be extracted
+    Returns:
+        (DataFrame) df_sub - Pandas DataFrame containing only the exctracted rows
+    """
 
     # get total number of rows in DataFrame
     nrows, _ = df.shape
 
-    # create list of 5 random integers to index the DataFrame
-    idx_list = [rnd.randint(0, nrows - 1) for i in range(5)]
+    # create list of n random integers to index the DataFrame
+    idx_list = [rnd.randint(0, nrows - 1) for i in range(n)]
 
-    # extract 5 random rows from DataFrame
+    # extract n random rows from DataFrame
     df_sub = df.iloc[idx_list]
+
+    return df_sub
+
+
+def individual_data(df):
+    """Displays individual data of bikeshare users."""
+
+    # get 5 random rows from DataFrame
+    df_sub = get_rand_rows(df, 5)
 
     # remove 1st columns
     df_sub = df_sub.drop(df.columns[0], axis=1)
