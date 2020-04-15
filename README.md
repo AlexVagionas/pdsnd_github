@@ -1,15 +1,23 @@
 ### Date created
-Include the date you created this project and README file.
+15 April 2020
 
 ### Project Title
-Replace the Project Title
+Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+Interactive console application for requesting statistics about bike rentals in Chicago, New York City and Washington.
+The user can type the city of his choice as well as apply time filters.
+The time filters provided are month, day, both month and day or no filter at all.
+It is also possible to see a random sample of individual trip data.
+
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://pandas.pydata.org/pandas-docs/stable/reference/index.html
+https://docs.python.org/3.5/library/index.html
 
